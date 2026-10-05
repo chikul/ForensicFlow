@@ -1,0 +1,8 @@
+*.pyc
+Protege/catalog-v001.xml
+legacy/TinyLeech/.vs/
+legacy/TinyLeech/TinyLeech/bin/
+legacy/TinyLeech/TinyLeech/obj/
+output/catalog-v001.xml
+papers/cited/
+papers/literature/

@@ -1,0 +1,46 @@
+Time,Type,Subtype,Description,Service,User,Device Type,Device ID,Source,Source Hash
+2018-05-17T09:44:53.343000+02:00,iSASensor,Door Opened,,,,iSmartAlarm,TheBouncer (Door Sensor),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T09:45:22+02:00,iSAHub,DISARM,,,TheBoss,iSmartAlarm,TheCube (CubeOne),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T09:45:22+02:00,iSASensor,Unmapped action 2,,,,iSmartAlarm,TheCube (CubeOne),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T09:47:18.967000+02:00,iSASensor,Door Closed,,,,iSmartAlarm,TheBouncer (Door Sensor),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T09:47:50+02:00,iSAHub,ARM,,,JPinkman,iSmartAlarm,TheCube (CubeOne),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T10:09:52.771000+02:00,iSASensor,Door Opened,,,,iSmartAlarm,TheBouncer (Door Sensor),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T10:09:55.279000+02:00,iSASensor,Motion Detected,,,,iSmartAlarm,TheMotion (Motion Sensor),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T10:09:57+02:00,iSAHub,DISARM,,,TheBoss,iSmartAlarm,TheCube (CubeOne),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T10:09:57+02:00,iSASensor,Unmapped action 2,,,,iSmartAlarm,TheCube (CubeOne),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T10:16:08.742000+02:00,AmazonEcho,History (Dialog Items),alexa play led zeppelin,Activity History,Jessie Pinkman,Amazon,Echo,./data/(2018-07-01_13.17.01)_CIFT_RESULT/cift_amazon_alexa.db,6b99bd493418bb019b2e612f9f0a1098
+2018-05-17T10:16:09.456000+02:00,AmazonEcho,SalmonCard,Link Spotify,Home,Jessie Pinkman,Amazon,Echo,./data/(2018-07-01_13.17.01)_CIFT_RESULT/cift_amazon_alexa.db,6b99bd493418bb019b2e612f9f0a1098
+2018-05-17T10:16:09.456000+02:00,AmazonEcho,History,alexa play led zeppelin,Activity History,Jessie Pinkman,Amazon,Echo,./data/(2018-07-01_13.17.01)_CIFT_RESULT/cift_amazon_alexa.db,6b99bd493418bb019b2e612f9f0a1098
+2018-05-17T10:16:09.458000+02:00,AmazonEcho,History (Dialog Items),"To play Spotify, link your premium account first using the Alexa App.",Activity History,Jessie Pinkman,Amazon,Echo,./data/(2018-07-01_13.17.01)_CIFT_RESULT/cift_amazon_alexa.db,6b99bd493418bb019b2e612f9f0a1098
+2018-05-17T10:16:20.470000+02:00,AmazonEcho,History,Unknown,Activity History,Jessie Pinkman,Amazon,Echo,./data/(2018-07-01_13.17.01)_CIFT_RESULT/cift_amazon_alexa.db,6b99bd493418bb019b2e612f9f0a1098
+2018-05-17T10:16:20.470000+02:00,AmazonEcho,History (Dialog Items),Unknown,Activity History,Jessie Pinkman,Amazon,Echo,./data/(2018-07-01_13.17.01)_CIFT_RESULT/cift_amazon_alexa.db,6b99bd493418bb019b2e612f9f0a1098
+2018-05-17T10:22:08.869000+02:00,AmazonEcho,History (Dialog Items),alexa,Activity History,Jessie Pinkman,Amazon,Echo,./data/(2018-07-01_13.17.01)_CIFT_RESULT/cift_amazon_alexa.db,6b99bd493418bb019b2e612f9f0a1098
+2018-05-17T10:22:09.229000+02:00,AmazonEcho,History,alexa,Activity History,Jessie Pinkman,Amazon,Echo,./data/(2018-07-01_13.17.01)_CIFT_RESULT/cift_amazon_alexa.db,6b99bd493418bb019b2e612f9f0a1098
+2018-05-17T10:22:12.093000+02:00,AmazonEcho,History (Dialog Items),tell i. smart alarm to arm my system,Activity History,Jessie Pinkman,Amazon,Echo,./data/(2018-07-01_13.17.01)_CIFT_RESULT/cift_amazon_alexa.db,6b99bd493418bb019b2e612f9f0a1098
+2018-05-17T10:22:13.528000+02:00,AmazonEcho,TextCard,Mode Changed (iSmartAlarm),Home,Jessie Pinkman,Amazon,Echo,./data/(2018-07-01_13.17.01)_CIFT_RESULT/cift_amazon_alexa.db,6b99bd493418bb019b2e612f9f0a1098
+2018-05-17T10:22:13.528000+02:00,AmazonEcho,History,tell i. smart alarm to arm my system,Activity History,Jessie Pinkman,Amazon,Echo,./data/(2018-07-01_13.17.01)_CIFT_RESULT/cift_amazon_alexa.db,6b99bd493418bb019b2e612f9f0a1098
+2018-05-17T10:22:13.530000+02:00,AmazonEcho,History (Dialog Items),"Your Door is open, Are you sure you want to arm your system?",Activity History,Jessie Pinkman,Amazon,Echo,./data/(2018-07-01_13.17.01)_CIFT_RESULT/cift_amazon_alexa.db,6b99bd493418bb019b2e612f9f0a1098
+2018-05-17T10:22:19.409000+02:00,AmazonEcho,History (Dialog Items),yes,Activity History,Jessie Pinkman,Amazon,Echo,./data/(2018-07-01_13.17.01)_CIFT_RESULT/cift_amazon_alexa.db,6b99bd493418bb019b2e612f9f0a1098
+2018-05-17T10:22:20.718000+02:00,AmazonEcho,TextCard,Mode Changed (iSmartAlarm),Home,Jessie Pinkman,Amazon,Echo,./data/(2018-07-01_13.17.01)_CIFT_RESULT/cift_amazon_alexa.db,6b99bd493418bb019b2e612f9f0a1098
+2018-05-17T10:22:20.718000+02:00,AmazonEcho,History,yes,Activity History,Jessie Pinkman,Amazon,Echo,./data/(2018-07-01_13.17.01)_CIFT_RESULT/cift_amazon_alexa.db,6b99bd493418bb019b2e612f9f0a1098
+2018-05-17T10:22:20.720000+02:00,AmazonEcho,History (Dialog Items),Your system will set to Arm in 30 seconds.,Activity History,Jessie Pinkman,Amazon,Echo,./data/(2018-07-01_13.17.01)_CIFT_RESULT/cift_amazon_alexa.db,6b99bd493418bb019b2e612f9f0a1098
+2018-05-17T10:22:22+02:00,iSAHub,ARM,,,JPinkman,iSmartAlarm,TheCube (CubeOne),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T10:22:25.439000+02:00,AmazonEcho,History,-,Activity History,Jessie Pinkman,Amazon,Echo,./data/(2018-07-01_13.17.01)_CIFT_RESULT/cift_amazon_alexa.db,6b99bd493418bb019b2e612f9f0a1098
+2018-05-17T10:22:30+02:00,iSAHub,DISARM,,,TheBoss,iSmartAlarm,TheCube (CubeOne),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T10:22:30+02:00,iSASensor,Unmapped action 2,,,,iSmartAlarm,TheCube (CubeOne),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T10:34:15.471000+02:00,iSASensor,Door Closed,,,,iSmartAlarm,TheBouncer (Door Sensor),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T10:34:17+02:00,iSAHub,HOME,,,TheBoss,iSmartAlarm,TheCube (CubeOne),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T10:34:17+02:00,iSASensor,Unmapped action 0,,,,iSmartAlarm,TheCube (CubeOne),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T10:34:31+02:00,iSAHub,DISARM,,,pandadodu,iSmartAlarm,TheCube (CubeOne),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T10:34:36.051000+02:00,iSASensor,Door Opened,,,,iSmartAlarm,TheBouncer (Door Sensor),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T10:35:54.956000+02:00,NEST,SMOKE_HEADS_UP,Duration 16s,,,NEST,topaz.18B430000039E345,./data/com.nest.android/cache/cache/cache-1332523362.json,9a7ce61f38eea5d582bb923d89fcafa7
+2018-05-17T10:36:11.198000+02:00,NEST,SMOKE_CLEAR,,,,NEST,topaz.18B430000039E345,./data/com.nest.android/cache/cache/cache-1332523362.json,9a7ce61f38eea5d582bb923d89fcafa7
+2018-05-17T10:37:52+02:00,iSAHub,DISARM,,,pandadodu,iSmartAlarm,TheCube (CubeOne),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T10:40:00+02:00,Scenario,Police informed,,,,,,,
+2018-05-17T10:45:00+02:00,Scenario,Forensic team arrives,,,,,,,
+2018-05-17T11:39:50.026000+02:00,iSASensor,Door Closed,,,,iSmartAlarm,TheBouncer (Door Sensor),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T14:52:10.075000+02:00,iSASensor,Door Opened,,,,iSmartAlarm,TheBouncer (Door Sensor),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T14:57:06.842000+02:00,iSASensor,Door Closed,,,,iSmartAlarm,TheBouncer (Door Sensor),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T14:58:03.694000+02:00,iSASensor,Door Opened,,,,iSmartAlarm,TheBouncer (Door Sensor),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T14:58:15.398000+02:00,iSASensor,Door Closed,,,,iSmartAlarm,TheBouncer (Door Sensor),./data/iSA.common/databases/iSmartAlarm.DB,65be1d5861ba8264f4afe1b250dc6095
+2018-05-17T17:50:55.615000+02:00,NEST,Unknown (0204),,,,NEST,topaz.18B430000039E345,./data/com.nest.android/cache/cache/cache-1332523362.json,9a7ce61f38eea5d582bb923d89fcafa7
