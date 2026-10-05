@@ -1,0 +1,4 @@
+*.pyc
+output/catalog-v001.xml
+papers/cited/
+papers/literature/
