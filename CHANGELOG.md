@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+
+### Added
+
+* Proper known facts handling: `KnownFatcsExtractor` and a dedicated known facts data source as a yaml file.
+
+### Fixed
+
+* Suspect's name was stated as Jesse Bruce Pinkman, which differs from the original scenario: Jessie Pinkman.
+
 ## [1.3.0] - 2026.10.05
 
 ### Added

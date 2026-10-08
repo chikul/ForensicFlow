@@ -1,5 +1,5 @@
 class DeviceBase:
-    def __init__(self, type: str, id: str, events: list = [], artifacts: list = [], users: list = [], source: str = "", hash: str = "", hardware_id: str = "", observed_ip: str = "") -> None:
+    def __init__(self, type: str, id: str, events: list = [], artifacts: list = [], users: list = [], source: str = "", hash: str = "", hardware_id: str = "", observed_ip: str = "", notes: str = "") -> None:
         self.type:str = type
         self.id:str = id
         self.events:list = events
@@ -9,6 +9,7 @@ class DeviceBase:
         self.hash:str = hash
         self.hardware_id:str = hardware_id
         self.observed_ip:str = observed_ip
+        self.notes:str = notes  # Known-facts-only field (KnownFactsExtractor)
 
 
     def __eq__(self, __o: object) -> bool:

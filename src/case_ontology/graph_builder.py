@@ -420,6 +420,17 @@ class CaseGraphBuilder:
     # ------------------------------------------------------------------
     # observable:ObservableRelationship
     # ------------------------------------------------------------------
+    # ------------------------------------------------------------------
+    # core:description - a free-text annotation usable on any
+    # core:UcoObject (persons, devices, ...). Used for investigator notes
+    # carried in known_facts.yaml (e.g. "claims reported by associates,
+    # not independently verified") that don't fit any other facet.
+    # ------------------------------------------------------------------
+    def add_description(self, uri: URIRef, text: str) -> None:
+        if not text:
+            return
+        self.g.add((uri, CORE.description, Literal(text, datatype=XSD.string)))
+
     def add_relationship(self, source_uri: URIRef, target_uri: URIRef, kind: str, directional: bool = True):
         key = (source_uri, target_uri, kind)
         if key in self._relationships:

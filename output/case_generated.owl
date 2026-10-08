@@ -155,10 +155,10 @@
     <observable:applicationIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iSmart Alarm</observable:applicationIdentifier>
     <observable:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0.0</observable:version>
   </rdf:Description>
-  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#confidencefacet:iSmartAlarm_JPinkman-Jesse_Bruce_Pinkman">
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#confidencefacet:iSmartAlarm_JPinkman-Jessie_Pinkman">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/core/ConfidenceFacet"/>
-    <core:confidence rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">59</core:confidence>
+    <core:confidence rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">73</core:confidence>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#confidencefacet:iSmartAlarm_pandadodu-D._Pandana">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -192,15 +192,48 @@
     <observable:magicNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SQLite 3.x database</observable:magicNumber>
     <observable:sizeInBytes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">151552</observable:sizeInBytes>
   </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#contentdatafacet:known_facts.yaml">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ContentDataFacet"/>
+    <observable:entropy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.598215841859429</observable:entropy>
+    <observable:hash rdf:resource="https://ontology.caseontology.org/case/case#hash:known_facts.yaml:MD5"/>
+    <observable:hash rdf:resource="https://ontology.caseontology.org/case/case#hash:known_facts.yaml:SHA256"/>
+    <observable:magicNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data</observable:magicNumber>
+    <observable:sizeInBytes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3957</observable:sizeInBytes>
+  </rdf:Description>
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#device:Amazon_Echo">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/SmartDevice"/>
     <core:hasFacet rdf:resource="https://ontology.caseontology.org/case/case#devicefacet:Amazon_Echo"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#device:ArloPro_Arlo_Pro_scene">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/SmartDevice"/>
+    <core:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Base station collected at the scene. At the forensic laboratory, a bootloader memory image and an archive of a folder of interest were acquired from this base station. No corresponding data source is present under data/, so no telemetry has been extracted or parsed by this pipeline.</core:description>
+    <core:hasFacet rdf:resource="https://ontology.caseontology.org/case/case#devicefacet:ArloPro_Arlo_Pro_scene"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#device:NEST_topaz.18B430000039E345">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/SmartDevice"/>
     <core:hasFacet rdf:resource="https://ontology.caseontology.org/case/case#devicefacet:NEST_topaz.18B430000039E345"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#device:NestCamera_Nest_Camera_scene">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/SmartDevice"/>
+    <core:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Observed at the scene. No acquisition action or corresponding data source is recorded for this device by this pipeline (not to be confused with the Nest Protect smoke detector, which is covered by NestRdfExport).</core:description>
+    <core:hasFacet rdf:resource="https://ontology.caseontology.org/case/case#devicefacet:NestCamera_Nest_Camera_scene"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#device:QBeeCamera_QBee_Camera_scene">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/SmartDevice"/>
+    <core:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Observed at the scene, apparently disabled. A sample of network traffic was collected on-site. No corresponding data source is present under data/, so no telemetry has been extracted or parsed by this pipeline.</core:description>
+    <core:hasFacet rdf:resource="https://ontology.caseontology.org/case/case#devicefacet:QBeeCamera_QBee_Camera_scene"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#device:WinkHub_WinkHub_scene">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/SmartDevice"/>
+    <core:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Observed at the scene. A filesystem image was acquired on-site by the digital forensic specialist. No corresponding data source is present under data/, so no telemetry has been extracted or parsed by this pipeline.</core:description>
+    <core:hasFacet rdf:resource="https://ontology.caseontology.org/case/case#devicefacet:WinkHub_WinkHub_scene"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#device:iSmartAlarm_TheBouncer_Door_Sensor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -217,17 +250,42 @@
     <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/SmartDevice"/>
     <core:hasFacet rdf:resource="https://ontology.caseontology.org/case/case#devicefacet:iSmartAlarm_TheMotion_Motion_Sensor"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#device:iSmartAlarm_Unknown">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/SmartDevice"/>
+    <core:hasFacet rdf:resource="https://ontology.caseontology.org/case/case#devicefacet:iSmartAlarm_Unknown"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#devicefacet:Amazon_Echo">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/DeviceFacet"/>
     <observable:deviceType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amazon Echo</observable:deviceType>
     <observable:serialNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">515cefc2f44e41dc9b6a4f7d54820900</observable:serialNumber>
   </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#devicefacet:ArloPro_Arlo_Pro_scene">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/DeviceFacet"/>
+    <observable:deviceType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ArloPro Arlo Pro (scene)</observable:deviceType>
+  </rdf:Description>
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#devicefacet:NEST_topaz.18B430000039E345">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/DeviceFacet"/>
     <observable:deviceType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEST topaz.18B430000039E345</observable:deviceType>
     <observable:serialNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">topaz.18B430000039E345</observable:serialNumber>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#devicefacet:NestCamera_Nest_Camera_scene">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/DeviceFacet"/>
+    <observable:deviceType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NestCamera Nest Camera (scene)</observable:deviceType>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#devicefacet:QBeeCamera_QBee_Camera_scene">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/DeviceFacet"/>
+    <observable:deviceType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QBeeCamera QBee Camera (scene)</observable:deviceType>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#devicefacet:WinkHub_WinkHub_scene">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/DeviceFacet"/>
+    <observable:deviceType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WinkHub WinkHub (scene)</observable:deviceType>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#devicefacet:iSmartAlarm_TheBouncer_Door_Sensor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -246,6 +304,12 @@
     <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/DeviceFacet"/>
     <observable:deviceType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iSmartAlarm TheMotion (Motion Sensor)</observable:deviceType>
     <observable:serialNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0006B4E5</observable:serialNumber>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#devicefacet:iSmartAlarm_Unknown">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/DeviceFacet"/>
+    <observable:deviceType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iSmartAlarm Unknown</observable:deviceType>
+    <observable:serialNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">000A9474</observable:serialNumber>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#digitaladdress:Amazon:id:A2F07N8TDIAK5U">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -901,6 +965,12 @@
     <core:hasFacet rdf:resource="https://ontology.caseontology.org/case/case#contentdatafacet:iSmartAlarm.DB"/>
     <core:hasFacet rdf:resource="https://ontology.caseontology.org/case/case#filefacet:iSmartAlarm.DB"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#file:known_facts.yaml">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/File"/>
+    <core:hasFacet rdf:resource="https://ontology.caseontology.org/case/case#contentdatafacet:known_facts.yaml"/>
+    <core:hasFacet rdf:resource="https://ontology.caseontology.org/case/case#filefacet:known_facts.yaml"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#filefacet:cache-1332523362.json">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/FileFacet"/>
@@ -927,6 +997,15 @@
     <observable:filePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">./data/iSA.common/databases/iSmartAlarm.DB</observable:filePath>
     <observable:isDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</observable:isDirectory>
     <observable:sizeInBytes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">151552</observable:sizeInBytes>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#filefacet:known_facts.yaml">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/FileFacet"/>
+    <observable:extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yaml</observable:extension>
+    <observable:fileName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">known_facts.yaml</observable:fileName>
+    <observable:filePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">./data/known_facts.yaml</observable:filePath>
+    <observable:isDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</observable:isDirectory>
+    <observable:sizeInBytes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3957</observable:sizeInBytes>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#hash:cache-1332523362.json:MD5">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -964,6 +1043,18 @@
     <types:hashMethod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SHA256</types:hashMethod>
     <types:hashValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">dbca18d95bd9e34c122fe957249d2593c22dfc1ab771c9cf95fcc5dfb9696f2e</types:hashValue>
   </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#hash:known_facts.yaml:MD5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/types/Hash"/>
+    <types:hashMethod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MD5</types:hashMethod>
+    <types:hashValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">8c64a8209b7495bb44a5d38cee398413</types:hashValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#hash:known_facts.yaml:SHA256">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/types/Hash"/>
+    <types:hashMethod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SHA256</types:hashMethod>
+    <types:hashValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">d186c00597f97af993f5017b17f823a77d1d12606fe1d7e0f48c3d8867df1705</types:hashValue>
+  </rdf:Description>
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#ipv4address:169.254.1.168">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/IPv4Address"/>
@@ -977,21 +1068,19 @@
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#person:D._Pandana">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/identity/Person"/>
+    <core:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Known associate of Jessie Pinkman, interrogated by police. Admitted having access to the drug lab's WiFi network. Denies any involvement in the raid.</core:description>
     <core:hasFacet rdf:resource="https://ontology.caseontology.org/case/case#simplenamefacet:D._Pandana"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#person:Jesse_Bruce_Pinkman">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/identity/Person"/>
-    <core:hasFacet rdf:resource="https://ontology.caseontology.org/case/case#simplenamefacet:Jesse_Bruce_Pinkman"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#person:Jessie_Pinkman">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/identity/Person"/>
+    <core:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Owner of the illegal drug lab raided on 2018-05-17. Not found at the scene. Per interrogated associates, had the IoT security systems installed fearing attacks from a rival gang, and kept the iSmartAlarm engaged in "Home" mode whenever present at the drug lab. These are claims reported by associates during interrogation, not independently verified facts.</core:description>
     <core:hasFacet rdf:resource="https://ontology.caseontology.org/case/case#simplenamefacet:Jessie_Pinkman"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#person:S._Varga">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/identity/Person"/>
+    <core:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Known associate of Jessie Pinkman, interrogated by police. Admitted having access to the drug lab's WiFi network. Denies any involvement in the raid.</core:description>
     <core:hasFacet rdf:resource="https://ontology.caseontology.org/case/case#simplenamefacet:S._Varga"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:associatedWithAccount-2018-05-17T09:45:22Z:iSAHub:DISARM-iSmartAlarm_TheBoss">
@@ -1089,6 +1178,22 @@
     <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">associated-with-ip-address</core:kindOfRelationship>
     <core:source rdf:resource="https://ontology.caseontology.org/case/case#device:iSmartAlarm_TheCube_CubeOne"/>
     <core:target rdf:resource="https://ontology.caseontology.org/case/case#ipv4address:169.254.1.168"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:associatedWithPerson-Jessie_Pinkman-D._Pandana">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">associated-with-person</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#person:Jessie_Pinkman"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#person:D._Pandana"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:associatedWithPerson-Jessie_Pinkman-S._Varga">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">associated-with-person</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#person:Jessie_Pinkman"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#person:S._Varga"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:associatedWithUser-2018-05-17T10:16:08Z:AmazonEcho:History_Dialog_Item-Jessie_Pinkman">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -1522,6 +1627,22 @@
     <core:source rdf:resource="https://ontology.caseontology.org/case/case#eventrecord-2018-05-17T10:37:52Z:iSAHub:DISARM"/>
     <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:iSmartAlarm.DB"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-2018-05-17T10:40:00Z:Scenario:Police_informed-known_facts.yaml">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#eventrecord-2018-05-17T10:40:00Z:Scenario:Police_informed"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:known_facts.yaml"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-2018-05-17T10:45:00Z:Scenario:Forensic_team_arrive-known_facts.yaml">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#eventrecord-2018-05-17T10:45:00Z:Scenario:Forensic_team_arrive"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:known_facts.yaml"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-2018-05-17T11:39:50Z:iSASensor:Door_Closed-iSmartAlarm.DB">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
@@ -1569,6 +1690,150 @@
     <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
     <core:source rdf:resource="https://ontology.caseontology.org/case/case#eventrecord-2018-05-17T17:50:55Z:NEST:Unknown_0204"/>
     <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:cache-1332523362.json"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-Amazon_Echo-cift_amazon_alexa.db">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#device:Amazon_Echo"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:cift_amazon_alexa.db"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-ArloPro_Arlo_Pro_scene-known_facts.yaml">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#device:ArloPro_Arlo_Pro_scene"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:known_facts.yaml"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-D._Pandana-known_facts.yaml">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#person:D._Pandana"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:known_facts.yaml"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-Jessie_Pinkman-cift_amazon_alexa.db">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#person:Jessie_Pinkman"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:cift_amazon_alexa.db"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-Jessie_Pinkman-known_facts.yaml">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#person:Jessie_Pinkman"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:known_facts.yaml"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-NEST_jpinkman2018_at_gmail.com-cache-1332523362.json">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#applicationaccount:NEST_jpinkman2018_at_gmail.com"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:cache-1332523362.json"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-NEST_topaz.18B430000039E345-cache-1332523362.json">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#device:NEST_topaz.18B430000039E345"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:cache-1332523362.json"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-NestCamera_Nest_Camera_scene-known_facts.yaml">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#device:NestCamera_Nest_Camera_scene"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:known_facts.yaml"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-QBeeCamera_QBee_Camera_scene-known_facts.yaml">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#device:QBeeCamera_QBee_Camera_scene"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:known_facts.yaml"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-S._Varga-known_facts.yaml">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#person:S._Varga"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:known_facts.yaml"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-WinkHub_WinkHub_scene-known_facts.yaml">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#device:WinkHub_WinkHub_scene"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:known_facts.yaml"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-iSmartAlarm_JPinkman-iSmartAlarm.DB">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#applicationaccount:iSmartAlarm_JPinkman"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:iSmartAlarm.DB"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-iSmartAlarm_TheBoss-iSmartAlarm.DB">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#applicationaccount:iSmartAlarm_TheBoss"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:iSmartAlarm.DB"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-iSmartAlarm_TheBouncer_Door_Sensor-iSmartAlarm.DB">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#device:iSmartAlarm_TheBouncer_Door_Sensor"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:iSmartAlarm.DB"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-iSmartAlarm_TheCube_CubeOne-iSmartAlarm.DB">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#device:iSmartAlarm_TheCube_CubeOne"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:iSmartAlarm.DB"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-iSmartAlarm_TheMotion_Motion_Sensor-iSmartAlarm.DB">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#device:iSmartAlarm_TheMotion_Motion_Sensor"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:iSmartAlarm.DB"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-iSmartAlarm_Unknown-iSmartAlarm.DB">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#device:iSmartAlarm_Unknown"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:iSmartAlarm.DB"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:extractedFromFile-iSmartAlarm_pandadodu-iSmartAlarm.DB">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
+    <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
+    <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extracted-from-file</core:kindOfRelationship>
+    <core:source rdf:resource="https://ontology.caseontology.org/case/case#applicationaccount:iSmartAlarm_pandadodu"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#file:iSmartAlarm.DB"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:linkedEmail-Amazon_A2F07N8TDIAK5U-jpinkman2018_at_gmail.com">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -1930,14 +2195,14 @@
     <core:source rdf:resource="https://ontology.caseontology.org/case/case#eventrecord-2018-05-17T17:50:55Z:NEST:Unknown_0204"/>
     <core:target rdf:resource="https://ontology.caseontology.org/case/case#device:NEST_topaz.18B430000039E345"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:ownedBy-iSmartAlarm_JPinkman-Jesse_Bruce_Pinkman">
+  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:ownedBy-iSmartAlarm_JPinkman-Jessie_Pinkman">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/observable/ObservableRelationship"/>
-    <core:hasFacet rdf:resource="https://ontology.caseontology.org/case/case#confidencefacet:iSmartAlarm_JPinkman-Jesse_Bruce_Pinkman"/>
+    <core:hasFacet rdf:resource="https://ontology.caseontology.org/case/case#confidencefacet:iSmartAlarm_JPinkman-Jessie_Pinkman"/>
     <core:isDirectional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</core:isDirectional>
     <core:kindOfRelationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ownedBy</core:kindOfRelationship>
     <core:source rdf:resource="https://ontology.caseontology.org/case/case#applicationaccount:iSmartAlarm_JPinkman"/>
-    <core:target rdf:resource="https://ontology.caseontology.org/case/case#person:Jesse_Bruce_Pinkman"/>
+    <core:target rdf:resource="https://ontology.caseontology.org/case/case#person:Jessie_Pinkman"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#relationship:ownedBy-iSmartAlarm_pandadodu-D._Pandana">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -1953,12 +2218,6 @@
     <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/identity/SimpleNameFacet"/>
     <identity:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pandana</identity:familyName>
     <identity:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D.</identity:givenName>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#simplenamefacet:Jesse_Bruce_Pinkman">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="https://ontology.unifiedcyberontology.org/uco/identity/SimpleNameFacet"/>
-    <identity:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinkman</identity:familyName>
-    <identity:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jesse Bruce</identity:givenName>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.caseontology.org/case/case#simplenamefacet:Jessie_Pinkman">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
