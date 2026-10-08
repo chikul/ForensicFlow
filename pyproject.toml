@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "forensic-flow"
-version = "1.3.0"
+version = "1.4.0"
 description = "An event-centric, UCO/CASE-compliant ontology framework for IoT digital forensics"
-authors = ["Pavel Chikul <pavel.tsikul@taltech.ee>"]
+authors = ["Pavel Chikul <pavel.chikul@taltech.ee>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]

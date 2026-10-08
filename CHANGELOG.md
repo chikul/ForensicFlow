@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 * Proper known facts handling: `KnownFatcsExtractor` and a dedicated known facts data source as a yaml file.
+* Extended the ontology with investigation-related entities.
 
 ### Fixed
 
