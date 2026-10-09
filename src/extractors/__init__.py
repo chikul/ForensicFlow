@@ -3,7 +3,9 @@ Extractors package.
 
 """
 from .alexa_rdf_export import AlexaRdfExport
+from .investigative_action_base import InvestigativeActionBase
 from .isa_rdf_export import IsaRdfExport
+from .known_facts_extractor import KnownFactsExtractor
 from .nest_rdf_export import NestRdfExport
 from .rdf_export_base import RdfExportBase
 from .artifact_base import ArtifactBase
@@ -17,7 +19,9 @@ __all__ = [
     "ArtifactBase",
     "DeviceBase",
     "EventBase",
+    "InvestigativeActionBase",
     "IsaRdfExport",
+    "KnownFactsExtractor",
     "NestRdfExport",
     "RdfExportBase",
     "UserBase",
