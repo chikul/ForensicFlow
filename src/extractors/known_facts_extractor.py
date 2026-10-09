@@ -15,6 +15,7 @@ import yaml
 
 from .device_base import DeviceBase
 from .event_base import EventBase
+from .investigative_action_base import InvestigativeActionBase
 from .rdf_export_base import RdfExportBase
 from .user_base import UserBase
 
@@ -70,3 +71,39 @@ class KnownFactsExtractor(RdfExportBase):
               f"{len(resulting_users)}/{len(data.get('associates', []))}/{len(resulting_devices)}/{len(resulting_events)}")
 
         return (resulting_users, resulting_devices, resulting_events, resulting_artifacts)
+
+    def carve_investigation(self):
+        """Parses known_facts.yaml's `examiner` and `investigative_actions`
+        sections - these don't fit the UserBase/DeviceBase/EventBase/
+        ArtifactBase quad carve() returns, so they're handed back separately.
+
+        Returns (examiner: UserBase | None, actions: list[InvestigativeActionBase]).
+        """
+        with open(self.data_sorce, encoding="utf-8") as f:
+            data = yaml.safe_load(f) or {}
+
+        examiner = None
+        examiner_data = data.get("examiner")
+        if examiner_data:
+            examiner = UserBase(
+                "Examiner", examiner_data["name"],
+                source=self.data_sorce, hash=self.source_hash,
+                notes=examiner_data.get("notes", "").strip(),
+                associates=[],
+            )
+
+        actions = []
+        for action in data.get("investigative_actions", []):
+            actions.append(InvestigativeActionBase(
+                action["id"], action["label"],
+                performer=examiner.name if examiner else "",
+                objects=[tuple(pair) for pair in action.get("objects", [])],
+                location=action.get("location", ""),
+                was_informed_by=list(action.get("was_informed_by", [])),
+                source=self.data_sorce, hash=self.source_hash,
+            ))
+
+        print(f"{'Known facts':30} examiner/investigative_actions: "
+              f"{examiner.name if examiner else '(none)'}/{len(actions)}")
+
+        return (examiner, actions)

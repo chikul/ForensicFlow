@@ -76,3 +76,77 @@ known_devices:
       Base station collected at the scene. At the forensic laboratory, a
       bootloader memory image and an archive of a folder of interest were
       acquired from this base station.
+
+  - type: "Samsung"
+    id: "Galaxy S6 Edge (Pinkman - scene)"
+    notes: >
+      Jessie Pinkman's phone, found dropped at the scene during the raid
+      (likely dropped during his escape). A physical image was acquired
+      by the digital forensic specialist.
+
+# The digital forensic specialist performing every action below. The
+# scenario narrative never gives this role a name - "Digital Forensic
+# Specialist" is the role description used in the text itself, not an
+# invented identity. Tagged with the investigation:Examiner role.
+examiner:
+  name: "Digital Forensic Specialist"
+  notes: >
+    Unnamed in the scenario narrative. Performs every acquisition and
+    preservation action, both on-scene and at the forensic
+    laboratory.
+
+# The chain-of-custody/acquisition narrative, in the order the scenario
+# describes it. Each `objects` entry is a [device_type, device_id] pair
+# that must match an existing DeviceBase/Device individual elsewhere in
+# the graph (run_case_export.py raises if it doesn't - see
+# CaseGraphBuilder.devices()). `was_informed_by` references another
+# action's `id` here, asserting investigation:wasInformedBy: the lab
+# analysis actions below were informed by the on-scene seizure that put
+# the device in the examiner's hands in the first place.
+investigative_actions:
+  - id: "preserve-isa-logs"
+    label: "Preserved the iSmartAlarm base station's diagnostic logs"
+    location: "Drug lab (scene)"
+    objects: [["iSmartAlarm", "TheCube (CubeOne)"]]
+
+  - id: "acquire-winkhub-filesystem"
+    label: "Acquired a filesystem image of the WinkHub"
+    location: "Drug lab (scene)"
+    objects: [["WinkHub", "WinkHub (scene)"]]
+
+  - id: "collect-qbee-traffic-sample"
+    label: "Collected a network traffic sample from the (apparently disabled) QBee Camera"
+    location: "Drug lab (scene)"
+    objects: [["QBeeCamera", "QBee Camera (scene)"]]
+
+  - id: "seize-isa-basestation"
+    label: "Collected the iSmartAlarm base station for in-depth lab analysis"
+    location: "Drug lab (scene)"
+    objects: [["iSmartAlarm", "TheCube (CubeOne)"]]
+
+  - id: "seize-arlo-basestation"
+    label: "Collected the Arlo Pro base station for in-depth lab analysis"
+    location: "Drug lab (scene)"
+    objects: [["ArloPro", "Arlo Pro (scene)"]]
+
+  - id: "image-isa-basestation-memory"
+    label: "Acquired a bootloader memory image of the iSmartAlarm base station"
+    location: "Forensic laboratory"
+    objects: [["iSmartAlarm", "TheCube (CubeOne)"]]
+    was_informed_by: ["seize-isa-basestation"]
+
+  - id: "image-arlo-basestation-memory"
+    label: "Acquired a bootloader memory image of the Arlo Pro base station"
+    location: "Forensic laboratory"
+    objects: [["ArloPro", "Arlo Pro (scene)"]]
+    was_informed_by: ["seize-arlo-basestation"]
+
+  - id: "archive-arlo-folder"
+    label: "Acquired an archive of a folder of interest from the Arlo Pro base station"
+    location: "Forensic laboratory"
+    objects: [["ArloPro", "Arlo Pro (scene)"]]
+    was_informed_by: ["seize-arlo-basestation"]
+
+  - id: "image-samsung-phone"
+    label: "Acquired a physical image of Jessie Pinkman's Samsung Galaxy S6 Edge, found dropped at the scene"
+    objects: [["Samsung", "Galaxy S6 Edge (Pinkman - scene)"]]

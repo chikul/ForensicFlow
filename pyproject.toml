@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.10"
 rdflib = "^7.6.0"
 pytz = ">=2026.3"
+pyyaml = "^6.0.3"
 
 [tool.poetry.group.dev.dependencies]
 pyshacl = "^0.40.1"

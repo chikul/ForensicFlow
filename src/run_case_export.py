@@ -124,6 +124,7 @@ def main():
     builder = CaseGraphBuilder()
 
     suspect_users = []
+    investigative_actions = []
 
     file_uris = {}
     for label, exporter, path in exporters:
@@ -135,6 +136,9 @@ def main():
 
         if label == "Known facts":
             suspect_users.extend(results[0])
+            examiner, investigative_actions = exporter.carve_investigation()
+            if examiner is not None:
+                users.append(examiner)
 
         file_uris[exporter.data_sorce] = builder.add_file_evidence(
             str(path), relative_path(path), precomputed_md5=exporter.source_hash
@@ -241,6 +245,13 @@ def main():
         if user.source in file_uris:
             builder.add_relationship(person_uri, file_uris[user.source], "extracted-from-file")
 
+        # investigation:Subject / investigation:Examiner role assignment
+        # (known_facts.yaml only - see UserBase.type for these two).
+        if user.type == "Suspect":
+            builder.add_subject_role(person_uri)
+        elif user.type == "Examiner":
+            builder.add_examiner_role(person_uri)
+
     # Known associates (known_facts.yaml "associates" pairs): a
     # non-directional "associated-with-person" link between two known
     # suspects, asserted by the investigation record rather than
@@ -259,6 +270,45 @@ def main():
             associate_uri = builder.add_person(associate_name)
             builder.add_relationship(person_uri, associate_uri, "associated-with-person", directional=False)
             associate_count += 1
+
+    # investigation:InvestigativeAction chain (known_facts.yaml's
+    # investigative_actions - see KnownFactsExtractor.carve_investigation()).
+    # Two passes: first create every action individual (so performer/object/
+    # location are all resolved against things that already exist in the
+    # graph), then wire wasInformedBy edges, which can reference an action
+    # defined later in the same list.
+    action_uris_by_id = {}
+    known_device_uris = builder.devices()
+    for action in investigative_actions:
+        object_uris = []
+        for device_key in action.objects:
+            if device_key not in known_device_uris:
+                raise ValueError(
+                    f"known_facts.yaml: investigative action {action.id!r} references "
+                    f"device {device_key!r}, which was never created in the graph"
+                )
+            object_uris.append(known_device_uris[device_key])
+
+        performer_uri = builder.add_person(action.performer) if action.performer else None
+        location_uri = builder.add_location(action.location) if action.location else None
+
+        action_uri = builder.add_investigative_action(
+            action.id, action.label,
+            performer_uri=performer_uri, object_uris=object_uris, location_uri=location_uri,
+        )
+        action_uris_by_id[action.id] = action_uri
+
+        if action.source in file_uris:
+            builder.add_relationship(action_uri, file_uris[action.source], "extracted-from-file")
+
+    for action in investigative_actions:
+        for informing_id in action.was_informed_by:
+            if informing_id not in action_uris_by_id:
+                raise ValueError(
+                    f"known_facts.yaml: investigative action {action.id!r} has "
+                    f"was_informed_by {informing_id!r}, which doesn't match any action id"
+                )
+            builder.add_was_informed_by(action_uris_by_id[action.id], action_uris_by_id[informing_id])
 
     # Entity resolution (fuzzy pass): for every ApplicationAccount, find
     # the best-matching known suspect by Myers-diff character similarity
