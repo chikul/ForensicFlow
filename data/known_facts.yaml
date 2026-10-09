@@ -1,0 +1,152 @@
+# Known facts: investigator-supplied ground truth from the DFRWS 2018 IoT
+# forensic challenge scenario narrative, not derived from any device
+# extraction. Parsed by KnownFactsExtractor (src/extractors/known_facts_extractor.py)
+# into the same UserBase/DeviceBase/EventBase/ArtifactBase records every
+# other extractor produces, so these facts get the same provenance
+# treatment (this file is hashed and modeled as a File individual).
+#
+# No time_frame_start/time_frame_end filtering is applied to this source
+# by design: these are facts asserted by the # investigation itself, not timestamped 
+# device telemetry to be windowed.
+
+suspects:
+  - name: "Jessie Pinkman"
+    notes: >
+      Owner of the illegal drug lab raided on 2018-05-17. Not found at the
+      scene. Per interrogated associates, had the IoT security systems
+      installed fearing attacks from a rival gang, and kept the iSmartAlarm
+      engaged in "Home" mode whenever present at the drug lab. These are
+      claims reported by associates during interrogation, not independently
+      verified facts.
+
+  - name: "D. Pandana"
+    notes: >
+      Known associate of Jessie Pinkman, interrogated by police. Admitted
+      having access to the drug lab's WiFi network. Denies any involvement
+      in the raid.
+
+  - name: "S. Varga"
+    notes: >
+      Known associate of Jessie Pinkman, interrogated by police. Admitted
+      having access to the drug lab's WiFi network. Denies any involvement
+      in the raid.
+
+# Suspect-to-suspect relationships explicitly stated in the scenario.
+associates:
+  - ["Jessie Pinkman", "D. Pandana"]
+  - ["Jessie Pinkman", "S. Varga"]
+
+# Events with no corresponding raw telemetry to extract (the initial
+# police response), asserted directly by the investigation record.
+known_events:
+  - time: "2018-05-17T10:40:00+02:00"
+    type: "Scenario"
+    subtype: "Police informed"
+  - time: "2018-05-17T10:45:00+02:00"
+    type: "Scenario"
+    subtype: "Forensic team arrives"
+
+# Devices the digital forensic specialist observed at the scene per the
+# scenario narrative, but for which this pipeline has no extractable data
+# source (yet). Modeled here so the full device inventory described in 
+# the scenario is represented in the ontology, with `notes` documenting 
+# exactly what was (and wasn't) collected/analyzed.
+known_devices:
+  - type: "WinkHub"
+    id: "WinkHub (scene)"
+    notes: >
+      Observed at the scene. A filesystem image was acquired on-site by
+      the digital forensic specialist.
+
+  - type: "QBeeCamera"
+    id: "QBee Camera (scene)"
+    notes: >
+      Observed at the scene, apparently disabled. A sample of network
+      traffic was collected on-site.
+
+  - type: "NestCamera"
+    id: "Nest Camera (scene)"
+    notes: >
+      Observed at the scene. Not to be confused with the Nest Protect 
+      smoke detector.
+
+  - type: "ArloPro"
+    id: "Arlo Pro (scene)"
+    notes: >
+      Base station collected at the scene. At the forensic laboratory, a
+      bootloader memory image and an archive of a folder of interest were
+      acquired from this base station.
+
+  - type: "Samsung"
+    id: "Galaxy S6 Edge (Pinkman - scene)"
+    notes: >
+      Jessie Pinkman's phone, found dropped at the scene during the raid
+      (likely dropped during his escape). A physical image was acquired
+      by the digital forensic specialist.
+
+# The digital forensic specialist performing every action below. The
+# scenario narrative never gives this role a name - "Digital Forensic
+# Specialist" is the role description used in the text itself, not an
+# invented identity. Tagged with the investigation:Examiner role.
+examiner:
+  name: "Digital Forensic Specialist"
+  notes: >
+    Unnamed in the scenario narrative. Performs every acquisition and
+    preservation action, both on-scene and at the forensic
+    laboratory.
+
+# The chain-of-custody/acquisition narrative, in the order the scenario
+# describes it. Each `objects` entry is a [device_type, device_id] pair
+# that must match an existing DeviceBase/Device individual elsewhere in
+# the graph (run_case_export.py raises if it doesn't - see
+# CaseGraphBuilder.devices()). `was_informed_by` references another
+# action's `id` here, asserting investigation:wasInformedBy: the lab
+# analysis actions below were informed by the on-scene seizure that put
+# the device in the examiner's hands in the first place.
+investigative_actions:
+  - id: "preserve-isa-logs"
+    label: "Preserved the iSmartAlarm base station's diagnostic logs"
+    location: "Drug lab (scene)"
+    objects: [["iSmartAlarm", "TheCube (CubeOne)"]]
+
+  - id: "acquire-winkhub-filesystem"
+    label: "Acquired a filesystem image of the WinkHub"
+    location: "Drug lab (scene)"
+    objects: [["WinkHub", "WinkHub (scene)"]]
+
+  - id: "collect-qbee-traffic-sample"
+    label: "Collected a network traffic sample from the (apparently disabled) QBee Camera"
+    location: "Drug lab (scene)"
+    objects: [["QBeeCamera", "QBee Camera (scene)"]]
+
+  - id: "seize-isa-basestation"
+    label: "Collected the iSmartAlarm base station for in-depth lab analysis"
+    location: "Drug lab (scene)"
+    objects: [["iSmartAlarm", "TheCube (CubeOne)"]]
+
+  - id: "seize-arlo-basestation"
+    label: "Collected the Arlo Pro base station for in-depth lab analysis"
+    location: "Drug lab (scene)"
+    objects: [["ArloPro", "Arlo Pro (scene)"]]
+
+  - id: "image-isa-basestation-memory"
+    label: "Acquired a bootloader memory image of the iSmartAlarm base station"
+    location: "Forensic laboratory"
+    objects: [["iSmartAlarm", "TheCube (CubeOne)"]]
+    was_informed_by: ["seize-isa-basestation"]
+
+  - id: "image-arlo-basestation-memory"
+    label: "Acquired a bootloader memory image of the Arlo Pro base station"
+    location: "Forensic laboratory"
+    objects: [["ArloPro", "Arlo Pro (scene)"]]
+    was_informed_by: ["seize-arlo-basestation"]
+
+  - id: "archive-arlo-folder"
+    label: "Acquired an archive of a folder of interest from the Arlo Pro base station"
+    location: "Forensic laboratory"
+    objects: [["ArloPro", "Arlo Pro (scene)"]]
+    was_informed_by: ["seize-arlo-basestation"]
+
+  - id: "image-samsung-phone"
+    label: "Acquired a physical image of Jessie Pinkman's Samsung Galaxy S6 Edge, found dropped at the scene"
+    objects: [["Samsung", "Galaxy S6 Edge (Pinkman - scene)"]]

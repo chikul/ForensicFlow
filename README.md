@@ -10,7 +10,7 @@
 
 **Pavel Chikul**
 Department of Computer Systems, Tallinn University of Technology, Estonia
-`pavel.tsikul@taltech.ee`
+`pavel.chikul@taltech.ee`
 
 **Hayretdin Bahşi**
 Northern Arizona University, United States
@@ -35,28 +35,28 @@ describes: it now targets the current UCO/CASE 1.5.0 standard rather than the
 ~0.9.1/0.7.1 versions those papers were written against. See `CHANGELOG.md`
 for the full history.
 
-## Why ForensicFlow stands out
+## ForensicFlow Features
 
-- **Event-centric, not artifact-centric.** Every extracted fact - a device
+- **Event-centric.** Every extracted fact - a device
   action, an account login, a sensor trigger - becomes a UCO/CASE
   `EventRecord`, linked by `ObservableRelationship`s to the devices,
   accounts, and people it involves, so an investigator can traverse *why*
   two pieces of evidence are connected, not just that they both exist.
-- **Real entity resolution, not just extraction.** An exact-match merge pass
+- **Real entity resolution.** An exact-match merge pass
   collapses records the same entity produced across multiple sources (e.g.
   one suspect's email address surfacing from both an Amazon and a NEST
   account), and a from-scratch implementation of Myers' 1986 O(ND) diff
   algorithm drives fuzzy `ownedBy` matching between application account
   handles and real names - each asserted link carries its own
   `core:ConfidenceFacet` score rather than being stated as fact.
-- **Schema-verified, not just schema-shaped.** Every property this
-  generator emits was checked against the actual UCO/CASE 1.5.0 SHACL
-  shapes with `pyshacl` (not just "does this class name exist").
 - **Per-source, pluggable extractors.** Amazon Alexa, iSmartAlarm, and NEST
   each get their own `carve()` implementation returning a handful of shared
   record types (`UserBase`, `DeviceBase`, `EventBase`, `ArtifactBase`);
   adding a new evidence source means writing one more extractor, not
   touching the ontology-generation layer.
+- **Schema-verified.** Every property this
+  generator emits was checked against the actual UCO/CASE 1.5.0 SHACL
+  shapes with `pyshacl`.
 
 ## The dataset
 

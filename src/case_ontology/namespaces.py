@@ -10,6 +10,9 @@ TYPES = Namespace("https://ontology.unifiedcyberontology.org/uco/types/")
 IDENTITY = Namespace("https://ontology.unifiedcyberontology.org/uco/identity/")
 OBSERVABLE = Namespace("https://ontology.unifiedcyberontology.org/uco/observable/")
 VOCABULARY = Namespace("https://ontology.unifiedcyberontology.org/uco/vocabulary/")
+ACTION = Namespace("https://ontology.unifiedcyberontology.org/uco/action/")
+LOCATION = Namespace("https://ontology.unifiedcyberontology.org/uco/location/")
+INVESTIGATION = Namespace("https://ontology.caseontology.org/case/investigation/")
 
 # Pinned to the exact release this generator targets.Bump ONTOLOGY_VERSION 
 # and re-verify against src/reference_ontologies/ when moving to a newer release.

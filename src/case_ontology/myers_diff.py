@@ -14,7 +14,7 @@ the bottom-right corner.
 
 Used here for entity resolution (see run_case_export.py): matching an
 ApplicationAccount's raw identifier (e.g. iSmartAlarm's "JPinkman") against
-a known suspect's real name (e.g. "Jesse Bruce Pinkman") by character-level
+a known suspect's real name (e.g. "Jessie Pinkman") by character-level
 similarity, to support an evidence-backed "ownedBy" link with a confidence
 score.
 """
@@ -65,7 +65,7 @@ def similarity_ratio(a: str, b: str) -> float:
     subsequence at all. Comparison is case-insensitive, since the
     usernames/identifiers being matched against real names differ in
     case for reasons that have nothing to do with identity (e.g.
-    "JPinkman" vs "Jesse Bruce Pinkman")."""
+    "JPinkman" vs "Jessie Pinkman")."""
     a, b = a.lower(), b.lower()
     if not a and not b:
         return 1.0
