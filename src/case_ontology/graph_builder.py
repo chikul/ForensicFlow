@@ -386,7 +386,7 @@ class CaseGraphBuilder:
         if key in self._events:
             return self._events[key]
 
-        time_str = event.time.strftime("%Y-%m-%dT%H:%M:%SZ")
+        time_str = event.time.isoformat()
         subtype_local = sanitize(event.subtype[0:20])
         frag = f"{time_str}:{event.type}:{subtype_local}"
 

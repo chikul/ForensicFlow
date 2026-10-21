@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.4.1]  - 2026.10.21
+
+### Fixed
+
+* Timezones were broken, providing fake UTC and dropping microseconds.
+* Broken CR/LN handling, due to mistakenly deleted `.gitattributes`.
+
 ## [1.4.0] - 2026.10.09
 
 ### Added
@@ -37,14 +44,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 * Hashes were stored incorrectly.
 
-## Refactored
+### Refactored
 
 * Extractors moved to `src` dir, `data` moved to the root. `dfrws2018` dir removed along with the old DCSDM2 application code.
 * Legacy ForensicFlow code removed.
 * Cleaned up extractors from the legacy `to_rdf()` methods.
 * Devices are now assigned a more specific class - `SmartDevice`.
 
-## Updated
+### Updated
 
 * `README.md` is now up to date.
 
