@@ -1,0 +1,7 @@
+# Force LF line endings for all text files in the working tree
+* text=auto eol=lf
+
+# Binary evidence sources and papers: never touch, never diff as text
+*.db binary
+*.DB binary
+*.pdf binary
